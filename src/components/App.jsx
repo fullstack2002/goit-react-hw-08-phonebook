@@ -24,19 +24,19 @@ export const App = () => {
     dispatch(fetchCurrentUser())
   }, [dispatch])
 
-return (
+  return (
     <>
-      {isLoadingUser ? <LoaderRoute /> : 
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route path="/register" element={<PublicRoute><RegisterForm /></PublicRoute>} />
-          <Route path="/login" element={<PublicRoute><LoginForm /></PublicRoute>} />
-          <Route path="/contacts" element={<PrivateRoute><Phonebook /></PrivateRoute>} />
-          <Route path='*' element={<NotFound />} />
-        </Route>
-      </Routes>
+      {isLoadingUser ? <LoaderRoute /> :
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path="/register" element={<PublicRoute><RegisterForm /></PublicRoute>} />
+            <Route path="/login" element={<PublicRoute><LoginForm /></PublicRoute>} />
+            <Route path="/contacts" element={<PrivateRoute><Phonebook /></PrivateRoute>} />
+            <Route path='*' element={<NotFound />} />
+          </Route>
+        </Routes>
       }
-      <ToastContainer autoClose={1000}/>
+      <ToastContainer autoClose={1000} />
     </>
   );
 };
