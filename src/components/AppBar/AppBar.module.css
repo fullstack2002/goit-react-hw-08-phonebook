@@ -1,0 +1,11 @@
+.link {
+  display: block;
+  width: 100px;
+  color: black;
+}
+
+.link:hover,
+.link:focus,
+.link.active {
+  background-color: darkolivegreen;
+}
