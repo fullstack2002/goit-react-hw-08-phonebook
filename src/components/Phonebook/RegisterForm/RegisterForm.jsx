@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
 import { getAuth } from 'redux/auth/authSlice';
 import { registerUser } from 'redux/auth/authOperations';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Phonebook/Loader/Loader';
 
 const RegisterForm = () => {
   const [name, setName] = useState('');
@@ -61,7 +61,7 @@ const RegisterForm = () => {
             value={email}
             onChange={handleChange}
             required
-            placeholder='your_email@mail.com'/>
+            placeholder='youremail@mail.com'/>
         <label htmlFor={passwordId}>Password</label>
         <input
             id={passwordId}
@@ -70,7 +70,7 @@ const RegisterForm = () => {
             value={password}
             onChange={handleChange}
             required
-            placeholder='min 7 symbols'/>
+            placeholder='7 symbols required'/>
         {!isLoading ? <button type='submit'>Sign Up</button> : <Loader />}
     </form>)
 };

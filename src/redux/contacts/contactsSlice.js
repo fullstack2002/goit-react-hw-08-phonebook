@@ -33,7 +33,7 @@ export const contactsSlice = createSlice({
       state.addingLoader = false;
       state.error = null;
       state.items.unshift(payload);
-      toast.success('ADDED !');
+      toast.success('Added !');
     },
     [addContact.rejected](state, { payload }) {
       state.addingLoader = false;
@@ -42,7 +42,7 @@ export const contactsSlice = createSlice({
     [deleteContact.fulfilled](state, { payload }) {
       state.error = null;
       state.items = state.items.filter(item => item.id !== payload);
-      toast.info('DELETED !');
+      toast.info('Deleted !');
     },
     [deleteContact.rejected](state, { payload }) {
       state.error = payload;

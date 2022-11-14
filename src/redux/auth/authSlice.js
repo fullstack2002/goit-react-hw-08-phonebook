@@ -1,5 +1,5 @@
-import { toast } from 'react-toastify';
 import { createSlice } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import {
   registerUser,
   loginUser,
@@ -30,12 +30,12 @@ export const authSlice = createSlice({
       state.isLoggedIn = true;
       state.token = payload.token;
       state.user = payload.user;
-      toast.success('Registration is complete');
+      toast.success('Thanks for joining!');
     },
     [registerUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something went wrong, try again');
+      toast.error('Something went wrong, try again!');
     },
     [loginUser.pending](state) {
       state.isLoading = true;
@@ -51,7 +51,7 @@ export const authSlice = createSlice({
     [loginUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something went wrong, try again');
+      toast.error('Something went wrong, try again!');
     },
     [logoutUser.pending](state) {
       state.isLoading = true;
@@ -62,12 +62,12 @@ export const authSlice = createSlice({
       state.isLoggedIn = false;
       state.user = { name: null, email: null };
       state.token = null;
-      toast.success('You have logged out');
+      toast.success('See you later!');
     },
     [logoutUser.rejected](state, { payload }) {
       state.isLoading = false;
       state.error = payload;
-      toast.error('Something went wrong, try again');
+      toast.error('Something went wrong, try again later!');
     },
     [fetchCurrentUser.pending](state) {
       state.isLoadingUser = true;

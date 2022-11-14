@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const baseURL = 'https://connections-api.herokuapp.com';
+const BASE_URL = 'https://connections-api.herokuapp.com';
 
 const instance = axios.create({
-  baseURL: baseURL,
+  baseURL: BASE_URL,
 });
 
 const setToken = {

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { Loader } from 'components/Loader/Loader';
+import { Loader } from 'components/Phonebook/Loader/Loader';
 import { getAuth } from 'redux/auth/authSlice';
 import { loginUser } from 'redux/auth/authOperations';
 
@@ -46,7 +46,7 @@ const LoginForm = () => {
             value={email}
             onChange={handleChange}
             required
-            placeholder='your_email'/>
+            placeholder='email'/>
         <label htmlFor={passwordId}>Password</label>
         <input
             id={passwordId}
@@ -55,7 +55,7 @@ const LoginForm = () => {
             value={password}
             onChange={handleChange}
             required
-            placeholder='your_password'/>
+            placeholder='password'/>
         {!isLoading ? <button type='submit'>Log In</button> : <Loader />
         }
     </form>)

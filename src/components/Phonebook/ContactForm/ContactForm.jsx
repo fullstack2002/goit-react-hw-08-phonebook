@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { addContact } from "redux/contacts/operations";
-import { getContacts } from '../../redux/contacts/contactsSlice';
+import { getContacts } from '../../../redux/contacts/contactsSlice';
 import { useSelector, useDispatch } from 'react-redux'
-import { Loader } from "components/Loader/Loader";
+import { Loader } from "components/Phonebook/Loader/Loader";
 import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 import { PhoneForm, PhoneField, PhoneInput, PhoneButton } from './ContactForm.styled';

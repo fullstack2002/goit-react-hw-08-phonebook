@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from '../../redux/filter/filterSlice';
+import { setFilter } from '../../../redux/filter/filterSlice';
 import { FilterTitle, FilterInput } from "./Filter.styled";
 
   export const Filter = () => {

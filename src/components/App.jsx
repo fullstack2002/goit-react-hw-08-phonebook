@@ -6,15 +6,15 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchCurrentUser } from "redux/auth/authOperations";
 import { getAuth } from "redux/auth/authSlice";
-import {PrivateRoute} from "./components/routes/PrivateRoute";
-import {PublicRoute} from "./components/routes/PublicRoute";
-import { Layout } from "./components/Layout/Layout";
-import { LoaderRoute } from "./components/Loader/Loader";
+import {PrivateRoute} from "./Routes/PrivateRoute";
+import {PublicRoute} from "./Routes/PublicRoute";
+import { Layout } from "./Phonebook/Layout/Layout";
+import { LoaderRoute } from "./Phonebook/Loader/Loader";
 
-const Phonebook = lazy(() => import('./components/Phonebook/Phonebook'))
-const RegisterForm = lazy(() => import('./components/RegisterForm/RegisterForm'))
-const LoginForm = lazy(() => import('./components/LoginForm/LoginForm'))
-const NotFound = lazy(() => import('./components/NotFound/NotFound'))
+const Phonebook = lazy(() => import('./Phonebook/Phonebook'))
+const RegisterForm = lazy(() => import('./Phonebook/RegisterForm/RegisterForm'))
+const LoginForm = lazy(() => import('./Phonebook/LoginForm/LoginForm'))
+const NotFound = lazy(() => import('./Phonebook/NotFound/NotFound'))
 
 export const App = () => {
   const dispatch = useDispatch();
