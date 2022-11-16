@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchCurrentUser } from "redux/auth/authOperations";
 import { getAuth } from "redux/auth/authSlice";
-import { PublicRoute } from './Routes/PublicRoute';
+import { PublicRoute } from './Routes/TheFile';
 import { PrivateRoute } from './Routes/PrivateRoute';
 import { Layout } from "./Phonebook/Layout/Layout";
 import { LoaderRoute } from "./Phonebook/Loader/Loader";
