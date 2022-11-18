@@ -13,7 +13,7 @@ export const AppBar = () => {
     dispatch(logoutUser())
     navigate('/login')
   }
-
+  
   const getClassName = ({ isActive }) => {
     return isActive ? `${css.link} ${css.active}` : css.link;
   }

@@ -52,12 +52,12 @@ const RegisterForm = () => {
             value={name}
             onChange={handleChange}
             required
-            placeholder='User_Name'/>
+            placeholder='user name'/>
         <label htmlFor={emailId}>Email</label>
         <input
             id={emailId}
             type="email"
-            name="userEmail"
+            name="user email"
             value={email}
             onChange={handleChange}
             required
@@ -66,7 +66,7 @@ const RegisterForm = () => {
         <input
             id={passwordId}
             type="password"
-            name="userPassword"
+            name="user password"
             value={password}
             onChange={handleChange}
             required
