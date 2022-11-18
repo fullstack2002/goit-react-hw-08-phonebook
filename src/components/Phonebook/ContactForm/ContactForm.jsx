@@ -61,17 +61,18 @@ export const ContactForm = () => {
           onChange={handleChange}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          placeholder='Input name'  
+          placeholder='contact name'  
           required />
       <PhoneField htmlFor={numberId}>Number</PhoneField>
       <PhoneInput
           id={numberId}
           type="tel"
-          name="contactNumber"
+            name="contactNumber"
+            value={number}
           onChange={handleChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          placeholder='Input name'  
+          placeholder='phone number'
           required />
         {addingLoader ?
             <Loader /> :
