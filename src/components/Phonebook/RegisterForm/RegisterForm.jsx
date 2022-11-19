@@ -57,7 +57,7 @@ const RegisterForm = () => {
         <input
             id={emailId}
             type="email"
-            name="user email"
+            name="userEmail"
             value={email}
             onChange={handleChange}
             required
@@ -66,7 +66,7 @@ const RegisterForm = () => {
         <input
             id={passwordId}
             type="password"
-            name="user password"
+            name="userPassword"
             value={password}
             onChange={handleChange}
             required
